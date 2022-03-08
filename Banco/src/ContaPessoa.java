@@ -8,6 +8,9 @@ public class ContaPessoa {
 		exemplo.depositar(1000);
 		System.out.println("Saldo após o depósito "+exemplo.saldo);
 		
-		System.out.println("ok");
+	 	boolean saque =  exemplo.saca(300);
+		System.out.println("informações apos o saque"+ exemplo.saldo);
+		
+		System.out.println(saque);
 	}
 }
