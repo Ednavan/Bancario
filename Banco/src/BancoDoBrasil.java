@@ -5,7 +5,7 @@ public class BancoDoBrasil {
 	int numero;              //atributos
 	String titular;
 	
-	void depositar(double valor) {
+	void deposita(double valor){
 		this.saldo = this.saldo + valor;
 	}
 	
@@ -17,6 +17,16 @@ public class BancoDoBrasil {
 		return false;
 	}
 		
+	}
+	
+	
+	public boolean transfere(double valor, BancoDoBrasil destino) {
+		if(this.saldo >= valor) {
+			this.saldo -= valor;
+			destino.deposita(valor);
+			return true;
+		}
+			return false;
 	}
 	
 

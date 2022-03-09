@@ -2,15 +2,18 @@
 public class ContaPessoa {
 	public static void main(String[] args) {
 		BancoDoBrasil exemplo = new BancoDoBrasil();
-		exemplo.saldo = 500;
-		System.out.println("saldo em conta: "+ exemplo.saldo);
+		BancoDoBrasil pessoa = new BancoDoBrasil();
 		
-		exemplo.depositar(1000);
-		System.out.println("Saldo após o depósito "+exemplo.saldo);
+	
 		
-	 	boolean saque =  exemplo.saca(300);
-		System.out.println("informações apos o saque"+ exemplo.saldo);
+		pessoa.deposita(3000);
+		exemplo.deposita(1000);
 		
-		System.out.println(saque);
+		pessoa.transfere(10, exemplo);
+		System.out.println(pessoa.saldo);
+		System.out.println(exemplo.saldo);
+	
+		
+		
 	}
 }
